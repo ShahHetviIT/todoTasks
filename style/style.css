@@ -1,0 +1,389 @@
+@font-face {
+    font-family: Monteserrat;
+    src: url(/fonts/Montserrat-Medium.ttf);
+}
+
+body{
+    margin: 0;
+    padding: 20px;
+    height: 100vh;
+}
+
+.maincontainer{
+    height: 100%;
+    padding: 25px 30px 25px;
+    background-color: #003366;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.date{
+    font-family: 'Monteserrat';
+    line-height: 100%;
+    font-size: 18px;
+    color: #fff;
+}
+
+.tasks{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    color: #fff;
+}
+
+.tasks a{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-family: 'Monteserrat';
+    line-height: 100%;
+    font-size: 18px;
+    color: #7575a3;
+    text-decoration: none;
+}
+
+
+.activeTask{
+    padding-top: 5px;
+    font-family: 'Monteserrat';
+    line-height: 100%;
+    font-size: 12px;
+    color:#00CCFF;
+}
+
+.addTask{
+    padding: 20px 0 60px;
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+
+.addTaskInput{
+    padding: 10px;
+    margin: 0;
+    font-family: 'Monteserrat';
+    line-height: 100%;
+    font-size: 12px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    width: 350px;
+}
+
+.addTaskBtn{
+    padding: 10px 15px;
+    margin: 0;
+    font-family: 'Monteserrat';
+    line-height: 100%;
+    font-size: 12px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    background-color: #00CCFF;
+    color: white;
+}
+
+
+/* NEW ICOMPLETE TASK */
+
+#listOfTasks{
+    overflow-x: hidden;
+    overflow-y: scroll;
+    height: 70%;
+}
+
+#listOfCompleteTask{
+    overflow-x: hidden;
+    overflow-y: scroll;
+    height: 70%;
+}
+
+.newTaskRow{
+    display: flex;
+    flex-direction: row;
+    padding: 15px 5px 15px 0;
+    border-top: 1px solid #DFDEDB;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.newTaskRow button{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    padding: 0;
+}
+
+.newTaskRow span{
+    padding-left: 25px;
+    font-family: 'Monteserrat';
+    line-height: 100%;
+    font-size: 14px;
+    color: white;
+}
+
+@media(max-width:950px){
+    .date {
+        font-family: 'Monteserrat';
+        line-height: 100%;
+        font-size: 15px;
+        color: #fff;
+    }
+
+    .tasks a {
+        background-color: transparent;
+        border: none;
+        outline: none;
+        font-family: 'Monteserrat';
+        line-height: 100%;
+        font-size: 15px;
+        color: #7575a3;
+        text-decoration: none;
+    }
+
+    .activeTask {
+        padding-top: 5px;
+        font-family: 'Monteserrat';
+        line-height: 100%;
+        font-size: 10px;
+        color: #00CCFF;
+    }
+
+    .addTaskInput {
+        padding: 9px;
+        margin: 0;
+        font-family: 'Monteserrat';
+        line-height: 100%;
+        font-size: 11px;
+        border: none;
+        outline: none;
+        border-radius: 5px;
+        width: 320px;
+    }
+
+    .addTaskBtn {
+        padding: 9px 15px;
+        margin: 0;
+        font-family: 'Monteserrat';
+        line-height: 100%;
+        font-size: 12px;
+        border: none;
+        outline: none;
+        border-radius: 5px;
+        background-color: #00CCFF;
+        color: white;
+    }
+}
+
+@media(max-width:768px){
+    .date {
+        font-family: 'Monteserrat';
+        line-height: 100%;
+        font-size: 12px;
+        color: #fff;
+    }
+
+    .tasks a {
+        background-color: transparent;
+        border: none;
+        outline: none;
+        font-family: 'Monteserrat';
+        line-height: 100%;
+        font-size: 12px;
+        color: #7575a3;
+        text-decoration: none;
+    }
+
+    .activeTask {
+        padding-top: 5px;
+        font-family: 'Monteserrat';
+        line-height: 100%;
+        font-size: 8px;
+        color: #00CCFF;
+    }
+
+    .addTaskInput {
+        padding: 7px;
+        margin: 0;
+        font-family: 'Monteserrat';
+        line-height: 100%;
+        font-size: 10px;
+        border: none;
+        outline: none;
+        border-radius: 4px;
+        width: 290px;
+    }
+
+    .addTaskBtn {
+        padding: 7px 12px;
+        margin: 0;
+        font-family: 'Monteserrat';
+        line-height: 100%;
+        font-size: 11px;
+        border: none;
+        outline: none;
+        border-radius: 5px;
+        background-color: #00CCFF;
+        color: white;
+    }
+}
+
+@media(max-width:540px){
+    .header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        flex-flow: column;
+        gap: 12px;
+    }
+
+    .date {
+        font-family: 'Monteserrat';
+        line-height: 100%;
+        font-size: 15px;
+        color: #fff;
+    }
+
+    .tasks a {
+        background-color: transparent;
+        border: none;
+        outline: none;
+        font-family: 'Monteserrat';
+        line-height: 100%;
+        font-size: 15px;
+        color: #7575a3;
+        text-decoration: none;
+    }
+
+    .activeTask {
+        padding-top: 13px;
+        font-family: 'Monteserrat';
+        line-height: 100%;
+        font-size: 9px;
+        color: #00CCFF;
+        text-align: center;
+    }
+
+    .addTask {
+        padding: 20px 0 50px;
+        display: flex;
+        flex-direction: row;
+        gap: 15px;
+        align-items: center;
+        justify-content: center;
+    }
+
+}
+
+@media(max-width:450px){
+    .addTaskInput {
+        padding: 7px;
+        margin: 0;
+        font-family: 'Monteserrat';
+        line-height: 100%;
+        font-size: 10px;
+        border: none;
+        outline: none;
+        border-radius: 4px;
+        width: 210px;
+    }
+}
+
+@media(max-width:400px){
+    .date {
+        font-family: 'Monteserrat';
+        line-height: 100%;
+        font-size: 13px;
+        color: #fff;
+    }
+
+    .tasks a {
+        background-color: transparent;
+        border: none;
+        outline: none;
+        font-family: 'Monteserrat';
+        line-height: 100%;
+        font-size: 13px;
+        color: #7575a3;
+        text-decoration: none;
+    }
+
+    .addTaskInput {
+        padding: 5px 7px;
+        margin: 0;
+        font-family: 'Monteserrat';
+        line-height: 100%;
+        font-size: 10px;
+        border: none;
+        outline: none;
+        border-radius: 4px;
+        width: 170px;
+    }
+
+    .addTaskBtn {
+        padding: 7px 12px;
+        margin: 0;
+        font-family: 'Monteserrat';
+        line-height: 100%;
+        font-size: 9px;
+        border: none;
+        outline: none;
+        border-radius: 5px;
+        background-color: #00CCFF;
+        color: white;
+    }
+
+    .fa-lg {
+        font-size: 1em;
+        line-height: .05em;
+        vertical-align: -0.075em;
+    }
+
+    .newTaskRow {
+        display: flex;
+        flex-direction: row;
+        padding: 8px 5px 8px 0;
+        border-top: 1px solid #DFDEDB;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .newTaskRow span {
+        padding-left: 25px;
+        font-family: 'Monteserrat';
+        line-height: 100%;
+        font-size: 12px;
+        color: white;
+    }
+
+    .maincontainer {
+        height: 100%;
+        padding: 20px 20px 20px;
+        background-color: #003366;
+        border-radius: 10px;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    }
+
+    body {
+        height: 100vh;
+        margin: 0;
+        padding: 15px;
+    }
+
+    .addTask {
+        padding: 20px 0 40px;
+        display: flex;
+        flex-direction: row;
+        gap: 15px;
+        align-items: center;
+        justify-content: center;
+    }
+}
